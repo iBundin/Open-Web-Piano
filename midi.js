@@ -8,12 +8,15 @@ function midiMessageReceived( ev ) {
     return
   if ( cmd==8 || ((cmd==9)&&(velocity==0)) ) { // with MIDI, note on with velocity zero is the same as note off
     // note off
-    noteOff( noteNumber );
+    openWebPiano.noteOff( noteNumber );
   } else if (cmd == 9) {
     // note on
-    noteOn(noteNumber, velocity);
+    openWebPiano.noteOn(noteNumber, velocity);
   } else if (cmd == 11) {
-    controller( noteNumber, velocity);
+    //controller( noteNumber, velocity);
+    if (noteNumber == 64) {
+      openWebPiano.sustain(velocity);
+    }
   } else if (cmd == 14) {
     // pitch wheel
     pitchWheel( ((velocity * 128.0 + noteNumber)-8192)/8192.0 );

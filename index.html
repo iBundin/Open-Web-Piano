@@ -69,18 +69,19 @@
       </select>
 </div>
 
-<script src="midi.js"></script>
 <script src="OpenWebPiano.js"></script>
 <script>
+	var audioCtx = new AudioContext();
+	openWebPiano.init(audioCtx);
 	function clickBody(event) {
 	    var newNoteNum  = 27 + (88 * event.clientX) / window.innerWidth;
 	    var velocity =  (1 - event.clientY / window.innerHeight) * 127;
 	    console.log(velocity);
-	    noteOn(newNoteNum, velocity);
+	    openWebPiano.noteOn(newNoteNum, velocity);
 	}
 	document.addEventListener("click", clickBody);
 </script>
-
+<script src="midi.js"></script>
 
 </body>
 </html>
