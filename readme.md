@@ -3,7 +3,7 @@ Light-weight virtual web piano. There is only one sample per octave, however sam
 
 ##Installation
 
-Simply copy ~~openWebPiano.js~~ and ~~audio~~ folder. See index.html for the example.
+Simply copy **_openWebPiano.js_** and **_audio_** folder. See index.html for the example.
 
 ##API
 
