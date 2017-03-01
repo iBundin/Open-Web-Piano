@@ -1,10 +1,9 @@
-Light-weight virtual web piano with a good sound. There is only one sample per octave, however samples are mixed with each other
-for realistic sound with full-length sustain. Lowpass filters are used to emulate dynamics. 
-You can check the demo here: http://ibundin.github.io/open-web-piano
+Light-weight virtual web piano. There is only one sample per octave, however samples are mixed with each other for realistic sound with correct full-length sustain. Lowpass filters are used to emulate dynamics. This instrument works well with sustain pedal.
+
 
 ##Installation
 
-Simply copy openWebPiano.js and all related audio files. See index.html for the example.
+Simply copy ~~openWebPiano.js~~ and ~~audio~~ folder. See index.html for the example.
 
 ##API
 
@@ -14,3 +13,5 @@ Simply copy openWebPiano.js and all related audio files. See index.html for the 
 3. **sustain(value)** - any value higher then 0 switches sustain on, 0 value switches sustain off.
 
 ##License
+
+[MIT](https://github.com/nishanths/license/blob/master/LICENSE)
