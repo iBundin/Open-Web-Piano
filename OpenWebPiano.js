@@ -10,7 +10,7 @@ var openWebPiano = (function(){
   var sustain = 0;
   var sustained = [];
   var notes;
-  
+
   function BufferLoader(contexts, urlList, callback) {
       this.context = contexts;
       this.urlList = urlList;
@@ -185,16 +185,16 @@ var openWebPiano = (function(){
       var bufferLoader = new BufferLoader(
             context,
             [
-            "../audio/piano/21.mp3",
-            "../audio/piano/33.mp3",
-            "../audio/piano/45.mp3",
-            "../audio/piano/57.mp3",
-            "../audio/piano/69.mp3",
-            "../audio/piano/81.mp3",
-            "../audio/piano/93.mp3",
-            "../audio/piano/105.mp3",
-            "../audio/damper.mp3",
-            "../audio/Piano Impulse6.mp3"
+            "https://raw.githubusercontent.com/ibundin/Open-Web-Piano/master/audio/piano/21.mp3",
+            "https://raw.githubusercontent.com/ibundin/Open-Web-Piano/master/audio/piano/33.mp3",
+            "https://raw.githubusercontent.com/ibundin/Open-Web-Piano/master/audio/piano/45.mp3",
+            "https://raw.githubusercontent.com/ibundin/Open-Web-Piano/master/audio/piano/57.mp3",
+            "https://raw.githubusercontent.com/ibundin/Open-Web-Piano/master/audio/piano/69.mp3",
+            "https://raw.githubusercontent.com/ibundin/Open-Web-Piano/master/audio/piano/81.mp3",
+            "https://raw.githubusercontent.com/ibundin/Open-Web-Piano/master/audio/piano/93.mp3",
+            "https://raw.githubusercontent.com/ibundin/Open-Web-Piano/master/audio/piano/105.mp3",
+            "https://raw.githubusercontent.com/ibundin/Open-Web-Piano/master/audio/damper.mp3",
+            "https://raw.githubusercontent.com/ibundin/Open-Web-Piano/master/audio/Piano Impulse6.mp3"
             ],
             bufferSaver
         );
