@@ -7,7 +7,7 @@ var openWebPiano = (function(){
   var convGainAfter;
   var bufferlists;
   var damper;
-  var sustain = 0;
+  var sus = 0;
   var sustained = [];
   var notes;
   
@@ -136,7 +136,7 @@ var openWebPiano = (function(){
   }
 
   function noteOff(noteNumber) {
-    if (!sustain) {
+    if (!sus) {
       if (noteNumber<90) {
         notes[noteNumber].gain.gain.setTargetAtTime(0.0, context.currentTime + 0.03, 0.08);
         notes[noteNumber].noteA.stop(context.currentTime + 2);
@@ -151,11 +151,11 @@ var openWebPiano = (function(){
 
   function sustain(val) {
     if (val==127) { 
-      sustain = true;
+      sus = true;
       convGain.gain.value = 1;
       convGainAfter.gain.value = 1;
     } else if (val==0) {
-      sustain = false;
+      sus = false;
       convGain.gain.value = 0.0;
       convGainAfter.gain.value = 0;
       for (var i = 0; i < sustained.length; i++) {
